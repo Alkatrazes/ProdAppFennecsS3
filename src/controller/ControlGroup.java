@@ -12,7 +12,7 @@ public class ControlGroup {
     public Jeu jeu;
     public Fenetre fenetre;
 
-    public ControlGroup(Jeu jeu) throws IOException {
+    public ControlGroup(Jeu jeu) {
         this.jeu = jeu;
         fenetre = new Fenetre(this.jeu);
 
