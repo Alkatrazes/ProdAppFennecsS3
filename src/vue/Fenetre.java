@@ -1,6 +1,7 @@
 package vue;
 
-import controller.*;
+import controller.ControlBarreMenu;
+import controller.ControlMenuPrincipal;
 import model.Jeu;
 
 import javax.swing.*;
@@ -13,8 +14,8 @@ import java.awt.*;
 public class Fenetre extends JFrame {
     public static Dimension tailleEcran = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 
-    public static final int X = (int)tailleEcran.getWidth();
-    public static final int Y = (int)tailleEcran.getHeight();
+    public static final int X = (int) tailleEcran.getWidth();
+    public static final int Y = (int) tailleEcran.getHeight();
     private Jeu jeu;
     public MenuPrincipal panelMenuPrincipal;
     public BarreMenu barreMenu;

@@ -19,15 +19,8 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
-            case "Nouvelle Partie":
-               // fenetre.setContentPane(fenetre.panelFenetreNouvellePartie);
-                fenetre.repaint();
-                fenetre.pack();
-                fenetre.setLocationRelativeTo(null);
-                fenetre.requestFocus();
-                break;
-            case "Charger Partie":
-                //fenetre.setContentPane(fenetre.panelFenetreCharger);
+            case "Jouer":
+                // fenetre.setContentPane(fenetre.panelFenetreNouvellePartie);
                 fenetre.repaint();
                 fenetre.pack();
                 fenetre.setLocationRelativeTo(null);
