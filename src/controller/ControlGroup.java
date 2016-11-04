@@ -3,8 +3,6 @@ package controller;
 import model.Jeu;
 import vue.Fenetre;
 
-import java.io.IOException;
-
 /**
  * Created by bastien on 28/09/16.
  */
