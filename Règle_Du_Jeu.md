@@ -23,6 +23,10 @@ But : posséder 20 étoiles ou plus le premier (15 étoiles si 5 personnes)
 * si colonne = >6 on donne (valeur - 6) étoile
 * si colonne = 6 la manche est fini le gagnant de la manche est le preneur de la colonne
 
+-> Réserve :
+* si la réserve = 0 (ne contient plus d'étoiles), et qu'un joueur gagne une/des étoiles, le joueur remporte tout de même les étoiles.
+* si la réserve = 0 et que le manche est finie, la partie prend fin.
+
 -> variante de carte : 
 *carte 1/5 -> le joueur qui prend la colonne choisi la valeur qui l'arrange
 
