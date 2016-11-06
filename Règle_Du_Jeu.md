@@ -1,5 +1,6 @@
 # Règle Fennecs
 
+Le jeu comporte: 26 cartes Fennecs, 30 étoiles (24 de valeur 1(orange), 6 de valeur 5 (blanche))
 Jouable de 2 à 5 personnes
 But : posséder 20 étoiles ou plus le premier (15 étoiles si 5 personnes)
 
