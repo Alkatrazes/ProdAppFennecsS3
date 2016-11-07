@@ -28,7 +28,7 @@ But : posséder 20 étoiles ou plus le premier (15 étoiles si 5 personnes)
 * si la réserve = 0 et que le manche est finie, la partie prend fin.
 
 -> variante de carte : 
-*carte 1/5 -> le joueur qui prend la colonne choisi la valeur qui l'arrange
+*carte 1/5 -> le joueur qui prend la colonne choisie la valeur qui l'arrange
 
 -> variante
 * sahara -> les cartes 0 ne change pas les négatives en positives et valent 0
