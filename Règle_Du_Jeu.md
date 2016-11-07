@@ -11,7 +11,7 @@ But : posséder 20 étoiles ou plus le premier (15 étoiles si 5 personnes)
 
 -> poser une carte :
 * face visible -> on gagne 1 étoile
-* face cacher -> on perd 1 étoile et pose l'étoile sur la carte posé
+* face cacher -> on perd 1 étoile et pose l'étoile sur la carte posée
 
 -> types de cartes :
 * carte négative -> elles valent la valeur indiquée (on soustrait)
