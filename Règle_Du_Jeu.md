@@ -5,6 +5,12 @@ Jouable de 2 à 5 personnes
 
 But : posséder 20 étoiles ou plus le premier (15 étoiles si 5 personnes)
 
+-> Au début de partie :
+* Si 3 joueurs :
+    chaque joueurs reçois 4 étoiles
+* Si 4 joueurs :
+    chaque joueurs reçois 3 étoiles
+
 -> à chaque tour :
 * poser une carte qui complète une colonne
 * ramasser la colonne de carte
