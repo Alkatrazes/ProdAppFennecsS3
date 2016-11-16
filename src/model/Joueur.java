@@ -20,6 +20,10 @@ public class Joueur {
         nbEtoile = _nbEtoile;
     }
 
+    public Joueur(String _nom) {
+        nom = _nom;
+    }
+
     public int getId(){
         return id;
     }
