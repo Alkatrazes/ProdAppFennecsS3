@@ -4,7 +4,6 @@ import controller.ControlBarreMenu;
 import model.Jeu;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by Florian Vaissiere on 03/10/2016.
@@ -19,7 +18,7 @@ public class BarreMenu extends JMenuBar {
     public JMenu menu;
     public JMenuItem credit;
 
-    public BarreMenu(Jeu _jeu,Fenetre _fen) {
+    public BarreMenu(Jeu _jeu, Fenetre _fen) {
 
         jeu = _jeu;
         fen = _fen;
@@ -38,13 +37,14 @@ public class BarreMenu extends JMenuBar {
         credit = new JMenuItem("Crédit");
         menu.add(credit);
     }
-/*
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        credit.setText("Crédit");
-        credit.repaint();
-    }
-*/
+
+    /*
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            credit.setText("Crédit");
+            credit.repaint();
+        }
+    */
     public void setControl(ControlBarreMenu controlBarreMenu) {
         menu.addActionListener(controlBarreMenu);
     }

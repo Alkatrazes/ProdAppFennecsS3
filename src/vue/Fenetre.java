@@ -5,18 +5,12 @@ import controller.ControlMenuPrincipal;
 import model.Jeu;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by bastien on 28/09/16.
  */
 
 public class Fenetre extends JFrame {
-    public static Dimension tailleEcran = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-
-    public static final int X = (int) tailleEcran.getWidth()-150;
-    public static final int Y = (int) tailleEcran.getHeight()-150;
-    
     private Jeu jeu;
     public MenuPrincipal panelMenuPrincipal;
     public BarreMenu barreMenu;
@@ -26,9 +20,9 @@ public class Fenetre extends JFrame {
         this.jeu = jeu;
 
         init();
-        //barreMenu.setVisible(false);
+        barreMenu.setVisible(false);
         setJMenuBar(barreMenu);
-        //setUndecorated(true);
+        setUndecorated(true);
         setContentPane(panelMenuPrincipal);
         pack();
         setTitle("Jeu");
@@ -40,7 +34,7 @@ public class Fenetre extends JFrame {
 
     public void init() {
         panelMenuPrincipal = new MenuPrincipal(this);
-        barreMenu = new BarreMenu(jeu,this);
+        barreMenu = new BarreMenu(jeu, this);
     }
 
     public void setControlMenuPrincipal(ControlMenuPrincipal controlMenuPrincipal) {

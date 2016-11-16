@@ -26,20 +26,6 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
                 fenetre.setLocationRelativeTo(null);
                 fenetre.requestFocus();
                 break;
-            case "Options":
-                //fenetre.setContentPane(fenetre.panelFenetreOptions);
-                fenetre.repaint();
-                fenetre.pack();
-                fenetre.setLocationRelativeTo(null);
-                fenetre.requestFocus();
-                break;
-            case "Crédits":
-                //fenetre.setContentPane(fenetre.panelFenetreCredits);
-                fenetre.repaint();
-                fenetre.pack();
-                fenetre.setLocationRelativeTo(null);
-                fenetre.requestFocus();
-                break;
             case "Quitter":
                 System.exit(0);
                 break;
