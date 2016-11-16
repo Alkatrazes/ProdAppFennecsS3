@@ -14,15 +14,12 @@ import static model.Jeu.Y;
 
 public class MenuPrincipal extends JPanel {
 
-    public Fenetre fen;
     public JButton jouer, quitter;
 
-    public MenuPrincipal(Fenetre _fen) {
-
-        fen = _fen;
+    public MenuPrincipal() {
 
         this.setLayout(null);
-        fen.setPreferredSize(new Dimension(X, Y));
+        setPreferredSize(new Dimension(X, Y));
 
         jouer = new JButton("Jouer");
         jouer.setActionCommand("Jouer");

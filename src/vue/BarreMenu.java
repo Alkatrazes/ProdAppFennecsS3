@@ -4,6 +4,7 @@ import controller.ControlBarreMenu;
 import model.Jeu;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by Florian Vaissiere on 03/10/2016.
@@ -13,39 +14,36 @@ public class BarreMenu extends JMenuBar {
 
     private Jeu jeu;
 
-    private Fenetre fen;
-
     public JMenu menu;
-    public JMenuItem credit;
+    public JMenuItem nouvellePartie, menuPrincipal, quitter;
 
-    public BarreMenu(Jeu _jeu, Fenetre _fen) {
+    public BarreMenu(Jeu _jeu) {
 
         jeu = _jeu;
-        fen = _fen;
 
         menu = new JMenu("Menu");
-        menu.setActionCommand("Menu");
+        nouvellePartie = new JMenuItem("Nouvelle Partie");
+        nouvellePartie.setActionCommand("Nouvelle Partie");
+        menuPrincipal = new JMenuItem("Menu Principal");
+        menuPrincipal.setActionCommand("Menu Principal");
+        quitter = new JMenuItem("Quitter");
+        quitter.setActionCommand("Quitter");
 
-        credit = null;
+        menu.add(nouvellePartie);
+        menu.add(menuPrincipal);
+        menu.add(quitter);
 
-        credit();
-        this.add(menu);
-        fen.setJMenuBar(this);
+        add(menu);
+
     }
 
-    public void credit() {
-        credit = new JMenuItem("Crédit");
-        menu.add(credit);
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
     }
 
-    /*
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            credit.setText("Crédit");
-            credit.repaint();
-        }
-    */
     public void setControl(ControlBarreMenu controlBarreMenu) {
-        menu.addActionListener(controlBarreMenu);
+        nouvellePartie.addActionListener(controlBarreMenu);
+        menuPrincipal.addActionListener(controlBarreMenu);
+        quitter.addActionListener(controlBarreMenu);
     }
 }
