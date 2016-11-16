@@ -14,32 +14,37 @@ public class BarreMenu extends JMenuBar {
 
     private Jeu jeu;
 
-    public JMenu test;
-    public JMenuItem menu;
+    private Fenetre fen;
 
-    public BarreMenu(Jeu jeu) {
+    public JMenu menu;
+    public JMenuItem credit;
 
-        this.jeu = jeu;
+    public BarreMenu(Jeu _jeu,Fenetre _fen) {
 
-        menu = new JMenuItem("Menu");
+        jeu = _jeu;
+        fen = _fen;
+
+        menu = new JMenu("Menu");
         menu.setActionCommand("Menu");
 
-        test = null;
+        credit = null;
 
-        add(menu);
+        credit();
+        this.add(menu);
+        fen.setJMenuBar(this);
     }
 
-    public void test() {
-        test = new JMenu("test");
-        add(test);
+    public void credit() {
+        credit = new JMenuItem("Crédit");
+        menu.add(credit);
     }
-
+/*
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        test.setText("test");
-        test.repaint();
+        credit.setText("Crédit");
+        credit.repaint();
     }
-
+*/
     public void setControl(ControlBarreMenu controlBarreMenu) {
         menu.addActionListener(controlBarreMenu);
     }

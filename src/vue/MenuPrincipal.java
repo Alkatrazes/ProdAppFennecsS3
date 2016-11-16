@@ -1,5 +1,6 @@
 package vue;
 
+import com.sun.naming.internal.FactoryEnumeration;
 import controller.ControlMenuPrincipal;
 
 import javax.swing.*;
@@ -14,12 +15,15 @@ import static vue.Fenetre.Y;
 
 public class MenuPrincipal extends JPanel {
 
+    public Fenetre fen;
     public JButton jouer, options, credits, quitter;
 
-    public MenuPrincipal() {
+    public MenuPrincipal(Fenetre _fen){
+
+        fen = _fen;
 
         this.setLayout(null);
-        setPreferredSize(new Dimension(X, Y));
+        fen.setPreferredSize(new Dimension(X, Y));
 
         jouer = new JButton("Jouer");
         jouer.setActionCommand("Jouer");
@@ -39,22 +43,22 @@ public class MenuPrincipal extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        jouer.setBounds(1248, 419, 415, 52);
+        jouer.setBounds((X/2)-415/2, 100, 415, 52);
         jouer.setBackground(new Color(255, 0, 0, 0));
         jouer.setFocusable(false);
         jouer.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        options.setBounds(1249, 496, 415, 52);
+        options.setBounds((X/2)-415/2, 200, 415, 52);
         options.setBackground(new Color(255, 0, 0, 0));
         options.setFocusable(false);
         options.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        credits.setBounds(1249, 572, 415, 52);
+        credits.setBounds((X/2)-415/2, 300, 415, 52);
         credits.setBackground(new Color(255, 0, 0, 0));
         credits.setFocusable(false);
         credits.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        quitter.setBounds(1248, 649, 418, 52);
+        quitter.setBounds((X/2)-415/2, 400, 418, 52);
         quitter.setBackground(new Color(255, 0, 0, 0));
         quitter.setFocusable(false);
         quitter.setCursor(new Cursor(Cursor.HAND_CURSOR));
