@@ -32,4 +32,24 @@ public class JoueurTestUnit {
             Assert.assertEquals(nom[j],listeJoueur.get(j+1).getNom());
         }
     }
+    @Test
+    public void testAjouterEtoileAujoeur() {
+        Joueur j = new Joueur(1,"Titi",4);
+        j.ajouterEtoie(1);
+        Assert.assertEquals(5,j.getNombreEtoie());
+    }
+
+    @Test
+    public void testRetirerEtoileAujoeur() {
+        Joueur j = new Joueur(1,"Titi",4);
+        j.retirerEtoie(1);
+        Assert.assertEquals(3,j.getNombreEtoie());
+    }
+
+    @Test
+    public void testRetirerPlusD_EtoileAuJoeurQu_IlEnA() {
+        Joueur j = new Joueur(1,"Titi",4);
+        j.retirerEtoie(5);
+        Assert.assertEquals(0,j.getNombreEtoie());
+    }
 }
