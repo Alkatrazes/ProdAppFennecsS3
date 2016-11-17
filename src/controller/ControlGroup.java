@@ -14,9 +14,10 @@ public class ControlGroup {
 
     public ControlGroup(Jeu jeu) {
         this.jeu = jeu;
-        fenetre = new Fenetre(this.jeu);
+        fenetre = new Fenetre(jeu);
 
-        ControlMenuPrincipal controlMenuPrincipal = new ControlMenuPrincipal(this.jeu, fenetre);
-        ControlBarreMenu controlBarreMenu = new ControlBarreMenu(this.jeu, fenetre);
+        ControlMenuPrincipal controlMenuPrincipal = new ControlMenuPrincipal(jeu, fenetre);
+        ControlFenetreNouvellePartie controlFenetreNouvellePartie = new ControlFenetreNouvellePartie(jeu, fenetre);
+        ControlBarreMenu controlBarreMenu = new ControlBarreMenu(jeu, fenetre);
     }
 }

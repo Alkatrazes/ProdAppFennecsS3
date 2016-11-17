@@ -14,33 +14,36 @@ public class BarreMenu extends JMenuBar {
 
     private Jeu jeu;
 
-    public JMenu test;
-    public JMenuItem menu;
+    public JMenu menu;
+    public JMenuItem nouvellePartie, menuPrincipal, quitter;
 
-    public BarreMenu(Jeu jeu) {
+    public BarreMenu(Jeu _jeu) {
 
-        this.jeu = jeu;
+        jeu = _jeu;
 
-        menu = new JMenuItem("Menu");
-        menu.setActionCommand("Menu");
+        menu = new JMenu("Menu");
+        nouvellePartie = new JMenuItem("Nouvelle Partie");
+        nouvellePartie.setActionCommand("Nouvelle Partie");
+        menuPrincipal = new JMenuItem("Menu Principal");
+        menuPrincipal.setActionCommand("Menu Principal");
+        quitter = new JMenuItem("Quitter");
+        quitter.setActionCommand("Quitter");
 
-        test = null;
+        menu.add(nouvellePartie);
+        menu.add(menuPrincipal);
+        menu.add(quitter);
 
         add(menu);
-    }
 
-    public void test() {
-        test = new JMenu("test");
-        add(test);
     }
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        test.setText("test");
-        test.repaint();
     }
 
     public void setControl(ControlBarreMenu controlBarreMenu) {
-        menu.addActionListener(controlBarreMenu);
+        nouvellePartie.addActionListener(controlBarreMenu);
+        menuPrincipal.addActionListener(controlBarreMenu);
+        quitter.addActionListener(controlBarreMenu);
     }
 }
